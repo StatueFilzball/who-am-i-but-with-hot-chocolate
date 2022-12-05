@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Who am I</title>
-    <script src="/js/index.js"></script>
   </head>
 
-  <header>
-    <h1>Who am I - Music Superstar Special Edition</h1>
-  </header>
+  
 
   <body>
+
+    <header>
+      <h1>Who am I - Music Superstar Special Edition</h1>
+    </header>
 
     <main>
     <section id="instruction">
@@ -22,11 +23,11 @@
         <h2>Take your guess!</h2>
         <div id="guess-box">
           <p>I got a feeling I know stuff about my</p>
-          <button onclick="selectorManipulator(`sex`)">Sex</button>
-          <button onclick="selectorManipulator(`age`)">Age</button>
-          <button onclick="selectorManipulator(`eyewear`)">Eyewear</button>
-          <button onclick="selectorManipulator(`headwear`)">Headwear</button>
-          <button onclick="selectorManipulator(`billboard`)">Billboard Success</button>
+          <button onclick="selectorManipulator(1)">Sex</button>
+          <button onclick="selectorManipulator(2)">Age</button>
+          <button onclick="selectorManipulator(3)">Eyewear</button>
+          <button onclick="selectorManipulator(4)">Headwear</button>
+          <button onclick="selectorManipulator(5)">Billboard Success</button>
             </div>
           </div>
           </div>
@@ -61,7 +62,7 @@
             <h2>Carlos Santana</h2>
           </div>
           <div class="character-flex">
-            <img src="/images/images-color/Wu Tang Clan Square.png" alt="Wu Tang Clan">
+            <img id="wu-tang" src="/images/images-color/wu-tang-clan-square.png" alt="Wu Tang Clan">
             <h2>Wu Tang Clan</h2>
           </div>
           <div class="character-flex">
@@ -78,7 +79,7 @@
           <h2>Robbie Williams</h2>
         </div>
         <div class="character-flex">
-          <img src="/images/images-color/The Pointer Sisters Square.jpg" alt="The Pointer Sisters">
+          <img src="/images/images-color/The Pointer Sisters Square.jpg" alt="Pointer Sisters">
           <h2>Pointer Sisters</h2>
         </div>
         <div class="character-flex">
@@ -148,5 +149,7 @@
       
     </section>
 </main>
-   
+<script src="/js/index.js"></script>
+
   </body>
+  </html>
