@@ -73,7 +73,7 @@ document.getElementById("guess-box").innerHTML = `<p>I think I am</p>
 
 if(buttonInput === 5){
 document.getElementById("guess-box").innerHTML = `<p>I think I had between
-<span><input></input><span> and <span><input></input><span> hits in the Billboard Hot 100.</p> <button onclick="valueCheckerBillboard()">Hit it</button><br><p>Note: The Billboard Hot 100 is the music industry standard record chart in the United States for songs, published weekly by Billboard magazine. Chart rankings are based on sales (physical and digital), radio play, and online streaming in the United States.<p>`
+<span><input type="number" id="firstValueBillBoard"></input><span> and <span><input type="number" id="secondValueBillboard"></input><span> hits in the Billboard Hot 100.</p> <button onclick="valueCheckerBillboard()">Hit it</button><br><p>Note: The Billboard Hot 100 is the music industry standard record chart in the United States for songs, published weekly by Billboard magazine. Chart rankings are based on sales (physical and digital), radio play, and online streaming in the United States.<p>`
 }
 
 }
@@ -216,7 +216,7 @@ else if(lowValue > yourIdentity.age || highValue < yourIdentity.age){
     console.log("Age guess incorrect triggered")
         for(let i = 0; i < characterArray.length; i++){
         
-            if(lowValue <= characterArray[i].age || highValue >= characterArray[i].age){ //this is always gonna be true
+            if(lowValue <= characterArray[i].age && highValue >= characterArray[i].age){ //this is always gonna be true
     
     characterToSwapImage = characterArray[i]
     characterArray.splice(i, 1) 
@@ -244,3 +244,60 @@ else if(lowValue > yourIdentity.age || highValue < yourIdentity.age){
 }
 
 
+function valueCheckerBillboard(){
+
+    let lowValue = document.getElementById("firstValueBillBoard").value
+    let highValue = document.getElementById("secondValueBillboard").value
+
+if(lowValue <= yourIdentity.billboardHot100 && highValue >= yourIdentity.billboardHot100){
+    console.log("Age guess correct triggered")
+
+    for(let i = 0; i < characterArray.length; i++){
+        
+        if(lowValue >= characterArray[i].billboardHot100 || highValue <= characterArray[i].billboardHot100){
+
+characterToSwapImage = characterArray[i]
+characterArray.splice(i, 1) 
+i -= 1 
+
+//logic to swap images goes here
+for(let j = 0; j < imgElements.length; j++){
+    if(imgElements[j].alt === characterToSwapImage.name){
+        imgElements[j].src = characterToSwapImage.bwImage
+    }
+}
+        }
+ }
+    } 
+    
+    
+else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.billboardHot100){
+    console.log("Age guess incorrect triggered")
+        for(let i = 0; i < characterArray.length; i++){
+        
+            if(lowValue <= characterArray[i].billboardHot100 && highValue >= characterArray[i].billboardHot100){ //this is always gonna be true
+    
+    characterToSwapImage = characterArray[i]
+    characterArray.splice(i, 1) 
+    i -= 1 
+    
+    
+    //logic to swap images goes here
+    for(let j = 0; j < imgElements.length; j++){
+        if(imgElements[j].alt === characterToSwapImage.name){
+            imgElements[j].src = characterToSwapImage.bwImage
+        }
+    }
+            }
+     }
+    }
+    console.log("Updated array",characterArray)
+
+    document.getElementById("guess-box").innerHTML = `<p>I got a feeling I know stuff about my</p>
+    <button onclick="selectorManipulator(1)">Sex</button>
+    <button onclick="selectorManipulator(2)">Age</button>
+    <button onclick="selectorManipulator(3)">Eyewear</button>
+    <button onclick="selectorManipulator(4)">Headwear</button>
+    <button onclick="selectorManipulator(5)">Billboard Success</button>`
+
+}
