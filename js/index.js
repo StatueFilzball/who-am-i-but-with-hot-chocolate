@@ -1,4 +1,3 @@
-//creating the class character
 
 class Character{
     constructor(name, isFemale, age, hasEyewear, hasHeadwear, billboardHot100, colorImage,bwImage){
@@ -80,17 +79,6 @@ document.getElementById("guess-box").innerHTML = `<p>I think I had between
 
 
 
-//Step 1: Extract the input of the value selector
-//Step 2: Turn it into the corect type => not sure if can skip
-//Step 3: Loop through the Array
-    //Step 3.1 If value doesnt match, remove character from Array
-    //Step 3.2 If value doesnt match, address the <img> matching the color value of the object 
-    //Step 3.3 Discard matching image with b/w version
-//Step 4 Check if Array length is equal to one
-    //Step 4.1 Equal to 1: Trigger function declaring end of game
-//Step 5: Reset to Property selector
-
-
 function valueCheckerSex(){  //false -> male
 
     for(let i = 0; i < characterArray.length; i++){
@@ -112,14 +100,11 @@ for(let j = 0; j < imgElements.length; j++){
  }
     }
     console.log("Updated array",characterArray)
-
-    document.getElementById("guess-box").innerHTML = `<p>I got a feeling I know stuff about my</p>
-    <button onclick="selectorManipulator(1)">Sex</button>
-    <button onclick="selectorManipulator(2)">Age</button>
-    <button onclick="selectorManipulator(3)">Eyewear</button>
-    <button onclick="selectorManipulator(4)">Headwear</button>
-    <button onclick="selectorManipulator(5)">Billboard Success</button>`
-
+    if(characterArray.length === 1){
+        endGame()
+    } else{
+    theCheekyRabbit()
+    }
 
 }
 
@@ -144,13 +129,11 @@ for(let j = 0; j < imgElements.length; j++){
  }
     }
     console.log("Updated array",characterArray)
-
-    document.getElementById("guess-box").innerHTML = `<p>I got a feeling I know stuff about my</p>
-    <button onclick="selectorManipulator(1)">Sex</button>
-    <button onclick="selectorManipulator(2)">Age</button>
-    <button onclick="selectorManipulator(3)">Eyewear</button>
-    <button onclick="selectorManipulator(4)">Headwear</button>
-    <button onclick="selectorManipulator(5)">Billboard Success</button>`
+    if(characterArray.length === 1){
+        endGame()
+    } else{
+        renderGuessbox()
+    }
 }
 
 
@@ -175,13 +158,12 @@ for(let j = 0; j < imgElements.length; j++){
  }
     }
     console.log("Updated array",characterArray)
-
-    document.getElementById("guess-box").innerHTML = `<p>I got a feeling I know stuff about my</p>
-    <button onclick="selectorManipulator(1)">Sex</button>
-    <button onclick="selectorManipulator(2)">Age</button>
-    <button onclick="selectorManipulator(3)">Eyewear</button>
-    <button onclick="selectorManipulator(4)">Headwear</button>
-    <button onclick="selectorManipulator(5)">Billboard Success</button>`
+    if(characterArray.length === 1){
+        endGame()
+    } else{
+        renderGuessbox()
+    }
+    
 }
 
 
@@ -233,13 +215,12 @@ else if(lowValue > yourIdentity.age || highValue < yourIdentity.age){
      }
     }
     console.log("Updated array",characterArray)
-
-    document.getElementById("guess-box").innerHTML = `<p>I got a feeling I know stuff about my</p>
-    <button onclick="selectorManipulator(1)">Sex</button>
-    <button onclick="selectorManipulator(2)">Age</button>
-    <button onclick="selectorManipulator(3)">Eyewear</button>
-    <button onclick="selectorManipulator(4)">Headwear</button>
-    <button onclick="selectorManipulator(5)">Billboard Success</button>`
+    if(characterArray.length === 1){
+        endGame()
+    } else{
+        renderGuessbox()
+    }
+    
 
 }
 
@@ -254,7 +235,7 @@ if(lowValue <= yourIdentity.billboardHot100 && highValue >= yourIdentity.billboa
 
     for(let i = 0; i < characterArray.length; i++){
         
-        if(lowValue >= characterArray[i].billboardHot100 || highValue <= characterArray[i].billboardHot100){
+        if(lowValue > characterArray[i].billboardHot100 || highValue < characterArray[i].billboardHot100){
 
 characterToSwapImage = characterArray[i]
 characterArray.splice(i, 1) 
@@ -275,7 +256,7 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
     console.log("Age guess incorrect triggered")
         for(let i = 0; i < characterArray.length; i++){
         
-            if(lowValue <= characterArray[i].billboardHot100 && highValue >= characterArray[i].billboardHot100){ //this is always gonna be true
+            if(lowValue < characterArray[i].billboardHot100 && highValue > characterArray[i].billboardHot100){ //this is always gonna be true
     
     characterToSwapImage = characterArray[i]
     characterArray.splice(i, 1) 
@@ -293,6 +274,24 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
     }
     console.log("Updated array",characterArray)
 
+    if(characterArray.length === 1){
+        endGame()
+    } else{
+        renderGuessbox()
+    }
+}
+
+function endGame(){
+
+document.getElementById("instruction").innerHTML = `<p>Damn champ, you figured it out!</p><br><img src=${yourIdentity.colorImage}>`
+
+}
+
+function theCheekyRabbit(){
+    document.getElementById("guess-box").innerHTML = `<p>Hey there, can you believe this weather? It's freezing out there. Here, take this mug of hot chocolate and get comfy.</p><br><img src=/images/images-color/magic-bunny.jpg><br><img src=/images/images-color/hot-chocolate.png><br><button onclick="renderGuessbox()">No thanks, magic bunny.</button><button onclick="gameOver()">Lovely. I'll take it</button>`
+    }
+
+function renderGuessbox(){
     document.getElementById("guess-box").innerHTML = `<p>I got a feeling I know stuff about my</p>
     <button onclick="selectorManipulator(1)">Sex</button>
     <button onclick="selectorManipulator(2)">Age</button>
@@ -300,4 +299,8 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
     <button onclick="selectorManipulator(4)">Headwear</button>
     <button onclick="selectorManipulator(5)">Billboard Success</button>`
 
+}
+
+function gameOver(){
+    document.getElementById("instruction").innerHTML = `<p>You lost. You really did not read the instructions, did you :(</p><button onClick="history.go(0);">Try again</button>`
 }

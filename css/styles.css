@@ -28,6 +28,7 @@ img{
 
 #guess-box{
     display: flex;
+    flex-direction: column;
 }
 
 #instruction{
@@ -36,4 +37,12 @@ img{
 
 #game{
     width:60vw
+}
+
+p{
+    font-size: 3rem;
+}
+
+#instruction h2{
+    font-size: 3rem;
 }
