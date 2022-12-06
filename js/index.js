@@ -36,15 +36,14 @@ const adele = new Character("Adele", true, 34, false, false, 25, "/images/images
 const pointerSisters = new Character("Pointer Sisters", true, 72, false, false, 26, "/images/images-color/The-Pointer-Sisters Square.jpg", "/images/images-bw/i22_the-pointer-sisters-square.jpg")
 const mileyCyrus = new Character("Miley Cyrus", true, 29, false, true, 53, "/images/images-color/Miley-Cyrus-Square.jpg", "/images/images-bw/i14_miley-cyrus-square.jpg")
 const arianaGrande = new Character("Ariana Grande", true, 29, false, false, 71, "/images/images-color/Ariana-Grande-Square.png", "/images/images-bw/i03_ariana-grande-square.png")
+
 const characterArray = [wuTangClan, carlosSantana, coldplay, kendrickLamar, robbieWilliams, backstreetBoys, snoopDogg, hanson, drDre, shawnMendes, oneDirection, justinBieber, missyElliot, destinysChild, britneySpears, aliciaKeys, mariahCarey, rihanna, spiceGirls, tlc, adele, pointerSisters, mileyCyrus, arianaGrande]
 let guessCount = 0
 const yourIdentity = characterArray[Math.floor(Math.random()*characterArray.length)]
 console.log("The Winner Pick", yourIdentity)
-
 const imgElements = document.querySelectorAll("img")
 
 
-//this is the switch from property to value selection
 function selectorManipulator(buttonInput) {
 
 if(buttonInput === 1){
@@ -76,8 +75,6 @@ document.getElementById("guess-box").innerHTML = `<p>I think I had between
 }
 
 }
-
-
 
 function valueCheckerSex(){  
 

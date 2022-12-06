@@ -5,7 +5,7 @@ html{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .row-flex{
@@ -37,6 +37,14 @@ img{
 #instruction{
     width: 40vw;
     background-color: #9DF7E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#instruction h2{
+    text-decoration: underline;
+    margin-bottom: auto
 }
 
 #game{
@@ -50,6 +58,11 @@ p{
 
 #instruction h2{
     font-size: 3rem;
+    padding-top: 10px;
+}
+
+instruction p{
+    margin: 0
 }
 
 audio{
@@ -86,6 +99,8 @@ audio{
 
 .gameOver{
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 #bunny-buttons{
@@ -106,3 +121,8 @@ renderGuessbox{
     text-align: center;
 }
 
+#myIdentityGuess{
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
