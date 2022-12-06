@@ -32,17 +32,40 @@ img{
 }
 
 #instruction{
-    width: 40vw
+    width: 40vw;
+    background-color: #9DF7E5;
 }
 
 #game{
-    width:60vw
+    width:60vw;
+    background-color: #9DF7E5;
 }
 
 p{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 #instruction h2{
     font-size: 3rem;
+}
+
+audio{
+    width: 150px;
+}
+
+#bunny-box{
+    display: flex;
+    flex-direction: column;
+}
+
+#bunny-box-full{
+    display: flex
+}
+
+.button-style{
+    background-color: #D0A5C0;
+    border: none;
+    border-radius: 1rem;
+    height: 3rem;
+    cursor: pointer;
 }
