@@ -59,15 +59,15 @@ document.getElementById("guess-box").innerHTML = `<p>I think I am between
 }
 
 if(buttonInput === 3){
-document.getElementById("guess-box").innerHTML = `<p>I think I am</p>
+document.getElementById("guess-box").innerHTML = `<p>I think I am
 <button class="button-style" onclick="valueCheckerEyewear(true)">wearing glasses</button>
-<button class="button-style" onclick="valueCheckerEyewear(false)">not wearing glasses</button>`
+<button class="button-style" onclick="valueCheckerEyewear(false)">not wearing glasses</button></p>`
 }
 
 if(buttonInput === 4){
-document.getElementById("guess-box").innerHTML = `<p>I think I am</p>
+document.getElementById("guess-box").innerHTML = `<p>I think I am
 <button class="button-style" onclick="valueCheckerHeadwear(true)">wearing headwear</button>
-<button class="button-style" onclick="valueCheckerHeadwear(false)">not wearing headwear</button>`
+<button class="button-style" onclick="valueCheckerHeadwear(false)">not wearing headwear</button></p>`
 }
 
 if(buttonInput === 5){
@@ -79,7 +79,7 @@ document.getElementById("guess-box").innerHTML = `<p>I think I had between
 
 
 
-function valueCheckerSex(){  //false -> male
+function valueCheckerSex(){  
 
     for(let i = 0; i < characterArray.length; i++){
         
@@ -297,16 +297,16 @@ document.getElementById("instruction").innerHTML = `<p>Damn champ, you figured i
 }
 
 function theCheekyRabbit(){
-    document.getElementById("guess-box").innerHTML = `<div id="bunny-box-full"><div id="bunny-box"><p>Hey there, can you believe this weather? It's freezing out there. Before your next guess, take this hot chocolate and get comfy.</p><button onclick="renderGuessbox()">No thanks, magic bunny.</button><button onclick="gameOver()">Lovely. I'll take it</button></div><br><img src=/images/images-color/hot-chocolate-transparent.png><img src=/images/images-color/cute-bunny-3.png></div>`
+    document.getElementById("guess-box").innerHTML = `<div id="bunny-box-full"><div id="bunny-box"><p>Hey there, can you believe this weather? It's freezing out there. Before your next guess, take this hot chocolate and get comfy.</p><div id="bunny-buttons"><button class="button-style" onclick="renderGuessbox()">No thanks, cute bunny.</button><button class="button-style" onclick="gameOver()">Lovely. I'll take it</button></div></div><br><img src=/images/images-color/hot-chocolate-transparent.png><img src=/images/images-color/cute-bunny-3.png></div>`
     }
 
 function renderGuessbox(){             
     document.getElementById("guess-box").innerHTML = `<p>I got a feeling I know stuff about my</p>
-    <button onclick="selectorManipulator(1)">Sex</button>
-    <button onclick="selectorManipulator(2)">Age</button>
-    <button onclick="selectorManipulator(3)">Eyewear</button>
-    <button onclick="selectorManipulator(4)">Headwear</button>
-    <button onclick="selectorManipulator(5)">Billboard Success</button>`
+    <div id="renderGuessbox"><button class="button-style" onclick="selectorManipulator(1)">Sex</button>
+    <button class="button-style" onclick="selectorManipulator(2)">Age</button>
+    <button class="button-style" onclick="selectorManipulator(3)">Eyewear</button>
+    <button class="button-style" onclick="selectorManipulator(4)">Headwear</button>
+    <button class="button-style" onclick="selectorManipulator(5)">Billboard Success</button></div>`
 
 }
 

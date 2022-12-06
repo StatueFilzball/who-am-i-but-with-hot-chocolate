@@ -1,5 +1,7 @@
 html{
     font-size: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #9DF7E5;
 }
 
 h1{
@@ -8,6 +10,7 @@ h1{
 
 .row-flex{
     display: flex;
+    justify-content: end;
 }
 
 .character-flex{
@@ -23,7 +26,7 @@ main {
 
 img{
     width: 150px;
-    padding: 5px;
+    padding: 5px 0px 5px 8px;
 }
 
 #guess-box{
@@ -51,6 +54,7 @@ p{
 
 audio{
     width: 150px;
+    height: 30px;
 }
 
 #bunny-box{
@@ -69,14 +73,25 @@ audio{
     height: 3rem;
     cursor: pointer;
     width: 15rem;
+    font-size: 1.3rem;
 }
 
 #counter-box{
-    border: 1px solid black;
+    border: 3px solid black;
     width:fit-content;
     padding: 5px 10px;
+    position:fixed;
+    bottom: 0;
 }
 
 .gameOver{
     text-align: center;
+}
+
+#bunny-buttons{
+    display: flex
+}
+
+renderGuessbox{
+    display: flex;
 }
