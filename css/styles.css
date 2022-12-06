@@ -89,9 +89,20 @@ audio{
 }
 
 #bunny-buttons{
-    display: flex
+    display: flex;
 }
+
 
 renderGuessbox{
     display: flex;
 }
+
+.endGameFlex{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    text-align: center;
+}
+

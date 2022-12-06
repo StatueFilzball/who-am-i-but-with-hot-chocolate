@@ -293,6 +293,7 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
 function endGame(){
 
 document.getElementById("instruction").innerHTML = `<p>Damn champ, you figured it out! You are ${yourIdentity.name}!</p><br><img src=${yourIdentity.colorImage}><br><p>Cool little fun fact: You are way better at DOM Manipulation than ${yourIdentity.name} ever will be. Keep rocking the Bootcamp, you little superstar!</p><br><button class="button-style" onClick="history.go(0);">Play again</button>`
+document.getElementById("instruction").classList = "endGameFlex"
 
 }
 
