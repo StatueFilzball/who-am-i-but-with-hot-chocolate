@@ -68,4 +68,15 @@ audio{
     border-radius: 1rem;
     height: 3rem;
     cursor: pointer;
+    width: 15rem;
+}
+
+#counter-box{
+    border: 1px solid black;
+    width:fit-content;
+    padding: 5px 10px;
+}
+
+.gameOver{
+    text-align: center;
 }

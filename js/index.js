@@ -49,30 +49,30 @@ function selectorManipulator(buttonInput) {
 
 if(buttonInput === 1){
 document.getElementById("guess-box").innerHTML = `<p>I think I am
-<button onclick="valueCheckerSex(true)">Female</button>
-<button onclick="valueCheckerSex(false)">Male</button></p>`
+<button class="button-style" onclick="valueCheckerSex(true)">Female</button>
+<button class="button-style" onclick="valueCheckerSex(false)">Male</button></p>`
 }
 
 if(buttonInput === 2){
 document.getElementById("guess-box").innerHTML = `<p>I think I am between
-<span><input type="number" id="firstValue"></input><span> and <span><input type="number" id="secondValue"></input><span> years old.</p> <button onclick="valueCheckerAge()">Hit it</button>`
+<span><input type="number" id="firstValue"></input><span> and <span><input type="number" id="secondValue"></input><span> years old.</p> <button class="button-style" onclick="valueCheckerAge()">Hit it</button>`
 }
 
 if(buttonInput === 3){
 document.getElementById("guess-box").innerHTML = `<p>I think I am</p>
-<button onclick="valueCheckerEyewear(true)">wearing glasses</button>
-<button onclick="valueCheckerEyewear(false)">not wearing glasses</button>`
+<button class="button-style" onclick="valueCheckerEyewear(true)">wearing glasses</button>
+<button class="button-style" onclick="valueCheckerEyewear(false)">not wearing glasses</button>`
 }
 
 if(buttonInput === 4){
 document.getElementById("guess-box").innerHTML = `<p>I think I am</p>
-<button onclick="valueCheckerHeadwear(true)">wearing headwear</button>
-<button onclick="valueCheckerHeadwear(false)">not wearing headwear</button>`
+<button class="button-style" onclick="valueCheckerHeadwear(true)">wearing headwear</button>
+<button class="button-style" onclick="valueCheckerHeadwear(false)">not wearing headwear</button>`
 }
 
 if(buttonInput === 5){
 document.getElementById("guess-box").innerHTML = `<p>I think I had between
-<span><input type="number" id="firstValueBillBoard"></input><span> and <span><input type="number" id="secondValueBillboard"></input><span> hits in the Billboard Hot 100.</p> <button onclick="valueCheckerBillboard()">Hit it</button><br><p>Note: The Billboard Hot 100 is the music industry standard record chart in the United States for songs, published weekly by Billboard magazine. Chart rankings are based on sales (physical and digital), radio play, and online streaming in the United States.<p>`
+<span><input type="number" id="firstValueBillBoard"></input><span> and <span><input type="number" id="secondValueBillboard"></input><span> hits in the Billboard Hot 100.</p> <button class="button-style" onclick="valueCheckerBillboard()">Hit it</button><br><p>Note: The Billboard Hot 100 is the music industry standard record chart in the United States for songs, published weekly by Billboard magazine. Chart rankings are based on sales (physical and digital), radio play, and online streaming in the United States.<p>`
 }
 
 }
@@ -292,7 +292,7 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
 
 function endGame(){
 
-document.getElementById("instruction").innerHTML = `<p>Damn champ, you figured it out! You are ${yourIdentity.name}!</p><br><img src=${yourIdentity.colorImage}><br><p>Cool little fun fact: You are way better at DOM Manipulation than ${yourIdentity.name} ever will be. Keep rocking the Bootcamp, you little superstar!</p><br><button onClick="history.go(0);">Play again</button>`
+document.getElementById("instruction").innerHTML = `<p>Damn champ, you figured it out! You are ${yourIdentity.name}!</p><br><img src=${yourIdentity.colorImage}><br><p>Cool little fun fact: You are way better at DOM Manipulation than ${yourIdentity.name} ever will be. Keep rocking the Bootcamp, you little superstar!</p><br><button class="button-style" onClick="history.go(0);">Play again</button>`
 
 }
 
@@ -311,7 +311,8 @@ function renderGuessbox(){
 }
 
 function gameOver(){
-    document.getElementById("instruction").innerHTML = `<p>You lost. You really did not read the instructions, did you :(</p><button onClick="history.go(0);">Try again</button>`
+    document.getElementById("instruction").innerHTML = `<p>You lost. You really did not read the instructions, did you :(</p><button class="button-style" onClick="history.go(0);">Try again</button>`
+    document.getElementById("instruction").classList += "gameOver"
 }
 
 function identityGuess(){
