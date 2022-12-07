@@ -39,7 +39,7 @@ img{
 }
 
 #instruction{
-    width: 40vw;
+    width: 80rem;
     background-color: #9DF7E5;
     display: flex;
     flex-direction: column;
