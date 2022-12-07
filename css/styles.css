@@ -34,6 +34,10 @@ img{
     flex-direction: column;
 }
 
+#guess-box h2{
+    margin-top: 0
+}
+
 #instruction{
     width: 40vw;
     background-color: #9DF7E5;

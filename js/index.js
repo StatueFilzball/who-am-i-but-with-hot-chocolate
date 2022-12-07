@@ -295,11 +295,11 @@ document.getElementById("instruction").classList = "endGameFlex"
 }
 
 function theCheekyRabbit(){
-    document.getElementById("guess-box").innerHTML = `<div id="bunny-box-full"><div id="bunny-box"><p>Hey there, can you believe this weather? It's freezing out there. Before your next guess, take this hot chocolate and get comfy.</p><div id="bunny-buttons"><button class="button-style" onclick="renderGuessbox()">No thanks, cute bunny.</button><button class="button-style" onclick="gameOver()">Lovely. I'll take it</button></div></div><br><img src=./images/images-color/hot-chocolate-transparent.png><img src=./images/images-color/cute-bunny-3.png></div>`
+    document.getElementById("guess-box").innerHTML = `<h2>Wait, a cute bunny?!</h2><br><div id="bunny-box-full"><div id="bunny-box"><p>Hey there, can you believe this weather? It's freezing out there. Before your next guess, take this hot chocolate and get comfy.</p><div id="bunny-buttons"><button class="button-style" onclick="renderGuessbox()">No thanks, cute bunny.</button><button class="button-style" onclick="gameOver()">Lovely. I'll take it</button></div></div><br><img src=./images/images-color/hot-chocolate-transparent.png><img src=./images/images-color/cute-bunny-3.png></div>`
     }
 
 function renderGuessbox(){             
-    document.getElementById("guess-box").innerHTML = `<p>I got a feeling I know stuff about my</p>
+    document.getElementById("guess-box").innerHTML = `<h2>Take your guess!</h2><p>I got a feeling I know stuff about my</p>
     <div id="renderGuessbox"><button class="button-style" onclick="selectorManipulator(1)">Sex</button>
     <button class="button-style" onclick="selectorManipulator(2)">Age</button>
     <button class="button-style" onclick="selectorManipulator(3)">Eyewear</button>
