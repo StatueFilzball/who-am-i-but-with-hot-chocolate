@@ -87,12 +87,7 @@ characterArray.splice(i, 1)
 i -= 1 
 
 
-//logic to swap images goes here
-for(let j = 0; j < imgElements.length; j++){
-    if(imgElements[j].alt === characterToSwapImage.name){
-        imgElements[j].src = characterToSwapImage.bwImage
-    }
-}
+pictureSwapper()
 
  }
     }
@@ -118,12 +113,9 @@ characterArray.splice(i, 1)
 i -= 1 
 
 
-//logic to swap images goes here
-for(let j = 0; j < imgElements.length; j++){
-    if(imgElements[j].alt === characterToSwapImage.name){
-        imgElements[j].src = characterToSwapImage.bwImage
-    }
-}
+
+pictureSwapper()
+
 
  }
     }
@@ -149,12 +141,10 @@ function valueCheckerHeadwear(value){
             i -= 1 
 
 
-//logic to swap images goes here
-             for(let j = 0; j < imgElements.length; j++){
-                if(imgElements[j].alt === characterToSwapImage.name){
-                imgElements[j].src = characterToSwapImage.bwImage
-                        }
-                }
+
+
+            pictureSwapper()
+
 }
     }
     
@@ -186,12 +176,10 @@ characterToSwapImage = characterArray[i]
 characterArray.splice(i, 1) 
 i -= 1 
 
-//logic to swap images goes here
-for(let j = 0; j < imgElements.length; j++){
-    if(imgElements[j].alt === characterToSwapImage.name){
-        imgElements[j].src = characterToSwapImage.bwImage
-    }
-}
+
+
+pictureSwapper()
+
         }
  }
     } 
@@ -208,12 +196,8 @@ else if(lowValue > yourIdentity.age || highValue < yourIdentity.age){
     i -= 1 
     
     
-    //logic to swap images goes here
-    for(let j = 0; j < imgElements.length; j++){
-        if(imgElements[j].alt === characterToSwapImage.name){
-            imgElements[j].src = characterToSwapImage.bwImage
-        }
-    }
+    pictureSwapper()
+
             }
      }
     }
@@ -246,12 +230,9 @@ characterToSwapImage = characterArray[i]
 characterArray.splice(i, 1) 
 i -= 1 
 
-//logic to swap images goes here
-for(let j = 0; j < imgElements.length; j++){
-    if(imgElements[j].alt === characterToSwapImage.name){
-        imgElements[j].src = characterToSwapImage.bwImage
-    }
-}
+
+pictureSwapper()
+
         }
  }
     } 
@@ -267,13 +248,9 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
     characterArray.splice(i, 1) 
     i -= 1 
     
-    
-    //logic to swap images goes here
-    for(let j = 0; j < imgElements.length; j++){
-        if(imgElements[j].alt === characterToSwapImage.name){
-            imgElements[j].src = characterToSwapImage.bwImage
-        }
-    }
+
+    pictureSwapper()
+
             }
      }
     }
@@ -335,3 +312,12 @@ function guessProbability(){
     console.log("Math floor chance", winningChance)
     document.getElementById("guess-probability").innerHTML = `${winningChance}`
 }
+
+
+function pictureSwapper(){
+    for(let j = 0; j < imgElements.length; j++){
+      if(imgElements[j].alt === characterToSwapImage.name){
+          imgElements[j].src = characterToSwapImage.bwImage
+      }
+  }
+  }
