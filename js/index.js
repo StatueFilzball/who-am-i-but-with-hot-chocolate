@@ -42,20 +42,27 @@ const yourIdentity = characterArray[Math.floor(Math.random()*characterArray.leng
 console.log("The Winner Pick", yourIdentity)
 
 
-
-
+const myAudio = document.getElementById("myAudio")
+function togglePlay() {
+    return myAudio.paused ? myAudio.play() : myAudio.pause();
+  }
 
 let guessCount = 0
 const imgElements = document.querySelectorAll("img")
 const guessboxElement = document.getElementById("guess-box")
 const instructionsElement = document.getElementById("instruction")
+const audioElements = document.querySelectorAll("audio")
+// let playSound = () => new Audio("./audio/rick-astley-never-gonna-give-you-up.mp3").play();
+for (let i=0; audioElements.length; i++){
+    audioElements[i].volume = 0.15
+}
 
 function selectorManipulator(buttonInput) {
 
 if(buttonInput === 1){
     guessboxElement.innerHTML = `<p>I think I am
-<button class="button-style" onclick="valueCheckerSex(true)">Female</button>
-<button class="button-style" onclick="valueCheckerSex(false)">Male</button></p>`
+<button class="button-style" onclick="valueCheckerSex(true); togglePlay()">Female</button>
+<button class="button-style" onclick="valueCheckerSex(false); togglePlay()">Male</button></p>`
 }
 
 if(buttonInput === 2){
@@ -103,7 +110,7 @@ pictureSwapper()
     if(characterArray.length === 1){
         endGame()
     } else{
-    theCheekyRabbit()
+    rickAstley()
     }
 
 }
@@ -263,9 +270,9 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
 }
 
 
-function theCheekyRabbit(){
-    guessboxElement.innerHTML = `<h2>Wait, a cute bunny?!</h2><br><div id="bunny-box-full"><div id="bunny-box"><p>Hey there, can you believe this weather? It's freezing out there. Before your next guess, take this hot chocolate and get comfy.</p><div id="bunny-buttons"><button style="margin-Right:5px" class="button-style" onclick="renderGuessbox()">No thanks, cute bunny.</button><button class="button-style" onclick="gameOver()">Lovely. I'll take it</button></div></div><br><img src=./images/images-color/hot-chocolate-transparent.png><img src=./images/images-color/cute-bunny-3.png></div>`
-    }
+function rickAstley(){
+    guessboxElement.innerHTML = `<div id="bunny-box-full"><div id="bunny-box"><h2>OMG, Rick Astley is trying a comeback</h2><p>Hey there, still groovin' to <i>Never gonna give you up</i>? Wanna buy a copy? $10 for a signed one.</p><div id="bunny-buttons"><button style="margin-Right:5px" class="button-style" onclick="renderGuessbox(); togglePlay()">No. Why are you even here?</button><button class="button-style" onclick="gameOver()">Just $10? Sure!</button></div></div><br><img src=./images/images-color/rick-astley.gif></div>`
+}
 
 function renderGuessbox(){            
     
@@ -334,5 +341,8 @@ function identityGuess(){
     }
 }
 
+
 //addeventlistener to guess identityguess trigger
 //try add 43
+
+
