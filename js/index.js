@@ -31,7 +31,7 @@ const aliciaKeys = new Character("Alicia Keys", true, 41, true, false, 28, "./im
 const mariahCarey = new Character("Mariah Carey", true, 52, true, false, 49, "./images/images-color/Mariah-Carey-Square.png", "./images/images-bw/i13_mariah-carey-square.png")
 const rihanna = new Character("Rihanna", true, 34, true, false, 63, "./images/images-color/Rihanna-Square.png", "./images/images-bw/i17_rihanna-square.png")
 const spiceGirls = new Character("Spice Girls", true, 48, true, false, 8,"./images/images-color/Spice-Girls-Square.jpg", "./images/images-bw/i21_spice-girls-square.jpg")
-const tlc = new Character("TLC", true, 52, false, false, 16, "./images/images-color/TLC-Square.jpg", "./images/images-bw/i23_tlc-square.jpg")
+const tlc = new Character("TLC", true, 52, false, true, 16, "./images/images-color/TLC-Square.jpg", "./images/images-bw/i23_tlc-square.jpg")
 const adele = new Character("Adele", true, 34, false, false, 25, "./images/images-color/Adele-Square.png", "./images/images-bw/i01_adele-square.png")
 const pointerSisters = new Character("Pointer Sisters", true, 72, false, false, 26, "./images/images-color/The-Pointer-Sisters Square.jpg", "./images/images-bw/i22_the-pointer-sisters-square.jpg")
 const mileyCyrus = new Character("Miley Cyrus", true, 29, false, true, 53, "./images/images-color/Miley-Cyrus-Square.jpg", "./images/images-bw/i14_miley-cyrus-square.jpg")
@@ -131,6 +131,7 @@ pictureSwapper()
     if(characterArray.length === 1){
 
     endGame()}
+    renderGuessbox()
 }
 
 function valueCheckerHeadwear(value){
@@ -157,7 +158,7 @@ function valueCheckerHeadwear(value){
     if(characterArray.length === 1){
 
         endGame()}
-    
+        renderGuessbox()
     
 }
 
@@ -208,7 +209,7 @@ else if(lowValue > yourIdentity.age || highValue < yourIdentity.age){
     if(characterArray.length === 1){
 
         endGame()}
-    
+        renderGuessbox()
 
 }
 
@@ -258,6 +259,7 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
     if(characterArray.length === 1){
 
         endGame()}
+        renderGuessbox()
 }
 
 
