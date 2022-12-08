@@ -96,19 +96,19 @@ function valueCheckerSex(value){
 
     if(value === true && value !== yourIdentity.isFemale){
     let liElement=document.createElement("li")
-liElement.innerText = "You guessed wrong. You're Character is male."
+liElement.innerText = "You guessed wrong. Your Character is male."
 document.getElementById("guess-history").appendChild(liElement)}
         else if(value === false && value !== yourIdentity.isFemale){
             let liElement=document.createElement("li")
-        liElement.innerText = "You guessed wrong. You're Character is female."
+        liElement.innerText = "You guessed wrong. Your Character is female."
         document.getElementById("guess-history").appendChild(liElement)}
         else if(value === false && value === yourIdentity.isFemale){
             let liElement=document.createElement("li")
-        liElement.innerText = "You guessed right. You're Character is male."
+        liElement.innerText = "You guessed right. Your Character is male."
         document.getElementById("guess-history").appendChild(liElement)}
         else if(value === true && value === yourIdentity.isFemale){
             let liElement=document.createElement("li")
-        liElement.innerText = "You guessed right. You're Character is female."
+        liElement.innerText = "You guessed right. Your Character is female."
         document.getElementById("guess-history").appendChild(liElement)}
 
     for(let i = 0; i < characterArray.length; i++){
@@ -140,19 +140,19 @@ function valueCheckerEyewear(valueEyewear){
 
     if(valueEyewear === true && valueEyewear !== yourIdentity.hasEyewear){
         let liElement=document.createElement("li")
-    liElement.innerText = "You guessed wrong. You're Character is not wearing glasses."
+    liElement.innerText = "You guessed wrong. Your Character is not wearing glasses."
     document.getElementById("guess-history").appendChild(liElement)}
             else if(valueEyewear === false && valueEyewear !== yourIdentity.hasEyewear){
                 let liElement=document.createElement("li")
-            liElement.innerText = "You guessed wrong. You're Character is wearing glasses."
+            liElement.innerText = "You guessed wrong. YourCharacter is wearing glasses."
             document.getElementById("guess-history").appendChild(liElement)}
             else if(valueEyewear === false && valueEyewear === yourIdentity.hasEyewear){
                 let liElement=document.createElement("li")
-            liElement.innerText = "You guessed right. You're Character is not wearing glasses."
+            liElement.innerText = "You guessed right. Your Character is not wearing glasses."
             document.getElementById("guess-history").appendChild(liElement)}
             else if(valueEyewear === true && valueEyewear === yourIdentity.hasEyewear){
                 let liElement=document.createElement("li")
-            liElement.innerText = "You guessed right. You're Character is wearing glasses."
+            liElement.innerText = "You guessed right. Your Character is wearing glasses."
             document.getElementById("guess-history").appendChild(liElement)}
 
     for(let i = 0; i < characterArray.length; i++){
@@ -183,19 +183,19 @@ function valueCheckerHeadwear(valueHeadwear){
 
     if(valueHeadwear === true && valueHeadwear !== yourIdentity.hasHeadwear){
         let liElement=document.createElement("li")
-    liElement.innerText = "You guessed wrong. You're Character is not wearing a hat."
+    liElement.innerText = "You guessed wrong. Your Character is not wearing a hat."
     document.getElementById("guess-history").appendChild(liElement)}
             else if(valueHeadwear === false && valueHeadwear !== yourIdentity.hasHeadwear){
                 let liElement=document.createElement("li")
-            liElement.innerText = "You guessed wrong. You're Character is wearing a hat."
+            liElement.innerText = "You guessed wrong. Your Character is wearing a hat."
             document.getElementById("guess-history").appendChild(liElement)}
             else if(valueHeadwear === false && valueHeadwear === yourIdentity.hasHeadwear){
                 let liElement=document.createElement("li")
-            liElement.innerText = "You guessed right. You're Character is not wearing a hat."
+            liElement.innerText = "You guessed right. Your Character is not wearing a hat."
             document.getElementById("guess-history").appendChild(liElement)}
             else if(valueHeadwear === true && valueHeadwear === yourIdentity.hasHeadwear){
                 let liElement=document.createElement("li")
-            liElement.innerText = "You guessed right. You're Character is wearing a hat."
+            liElement.innerText = "You guessed right. Your Character is wearing a hat."
             document.getElementById("guess-history").appendChild(liElement)}
 
     for(let i = 0; i < characterArray.length; i++){
