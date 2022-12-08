@@ -41,11 +41,3 @@ const characterArray = [wuTangClan, carlosSantana, coldplay, kendrickLamar, robb
 const yourIdentity = characterArray[Math.floor(Math.random()*characterArray.length)]
 console.log("The Winner Pick", yourIdentity)
 
-function identityGuess(){
-    let inputStr = document.getElementById("myIdentityGuess").value
-    if (inputStr === yourIdentity.name){
-        endGame()
-    } else{
-        wrongGuess()
-    }
-}
