@@ -49,6 +49,7 @@ function togglePlay() {
 
 let guessCount = 0
 const imgElements = document.querySelectorAll("img")
+const olElement = document.getElementById("guess-history")
 const guessboxElement = document.getElementById("guess-box")
 const instructionsElement = document.getElementById("instruction")
 const audioElements = document.querySelectorAll("audio")
@@ -89,12 +90,32 @@ if(buttonInput === 5){
 
 }
 
-function valueCheckerSex(){  
+function valueCheckerSex(value){  
+
+    //setting up the guess history
+
+    if(value === true && value !== yourIdentity.isFemale){
+    let liElement=document.createElement("li")
+liElement.innerText = "You guessed wrong. You're Character is male."
+document.getElementById("guess-history").appendChild(liElement)}
+        else if(value === false && value !== yourIdentity.isFemale){
+            let liElement=document.createElement("li")
+        liElement.innerText = "You guessed wrong. You're Character is female."
+        document.getElementById("guess-history").appendChild(liElement)}
+        else if(value === false && value === yourIdentity.isFemale){
+            let liElement=document.createElement("li")
+        liElement.innerText = "You guessed right. You're Character is male."
+        document.getElementById("guess-history").appendChild(liElement)}
+        else if(value === true && value === yourIdentity.isFemale){
+            let liElement=document.createElement("li")
+        liElement.innerText = "You guessed right. You're Character is female."
+        document.getElementById("guess-history").appendChild(liElement)}
 
     for(let i = 0; i < characterArray.length; i++){
         
         if(characterArray[i].isFemale !== yourIdentity.isFemale){ 
-//create an element next to guess counter
+
+
 characterToSwapImage = characterArray[i]
 characterArray.splice(i, 1) 
 i -= 1 
@@ -115,7 +136,24 @@ pictureSwapper()
 
 }
 
-function valueCheckerEyewear(value){
+function valueCheckerEyewear(valueEyewear){
+
+    if(valueEyewear === true && valueEyewear !== yourIdentity.hasEyewear){
+        let liElement=document.createElement("li")
+    liElement.innerText = "You guessed wrong. You're Character is not wearing glasses."
+    document.getElementById("guess-history").appendChild(liElement)}
+            else if(valueEyewear === false && valueEyewear !== yourIdentity.hasEyewear){
+                let liElement=document.createElement("li")
+            liElement.innerText = "You guessed wrong. You're Character is wearing glasses."
+            document.getElementById("guess-history").appendChild(liElement)}
+            else if(valueEyewear === false && valueEyewear === yourIdentity.hasEyewear){
+                let liElement=document.createElement("li")
+            liElement.innerText = "You guessed right. You're Character is not wearing glasses."
+            document.getElementById("guess-history").appendChild(liElement)}
+            else if(valueEyewear === true && valueEyewear === yourIdentity.hasEyewear){
+                let liElement=document.createElement("li")
+            liElement.innerText = "You guessed right. You're Character is wearing glasses."
+            document.getElementById("guess-history").appendChild(liElement)}
 
     for(let i = 0; i < characterArray.length; i++){
         
@@ -141,7 +179,24 @@ pictureSwapper()
     renderGuessbox()
 }
 
-function valueCheckerHeadwear(value){
+function valueCheckerHeadwear(valueHeadwear){
+
+    if(valueHeadwear === true && valueHeadwear !== yourIdentity.hasHeadwear){
+        let liElement=document.createElement("li")
+    liElement.innerText = "You guessed wrong. You're Character is not wearing a hat."
+    document.getElementById("guess-history").appendChild(liElement)}
+            else if(valueHeadwear === false && valueHeadwear !== yourIdentity.hasHeadwear){
+                let liElement=document.createElement("li")
+            liElement.innerText = "You guessed wrong. You're Character is wearing a hat."
+            document.getElementById("guess-history").appendChild(liElement)}
+            else if(valueHeadwear === false && valueHeadwear === yourIdentity.hasHeadwear){
+                let liElement=document.createElement("li")
+            liElement.innerText = "You guessed right. You're Character is not wearing a hat."
+            document.getElementById("guess-history").appendChild(liElement)}
+            else if(valueHeadwear === true && valueHeadwear === yourIdentity.hasHeadwear){
+                let liElement=document.createElement("li")
+            liElement.innerText = "You guessed right. You're Character is wearing a hat."
+            document.getElementById("guess-history").appendChild(liElement)}
 
     for(let i = 0; i < characterArray.length; i++){
         
@@ -173,6 +228,16 @@ function valueCheckerAge(){
 
     let lowValue = document.getElementById("firstValue").value
     let highValue = document.getElementById("secondValue").value
+
+    if(lowValue <= yourIdentity.age && yourIdentity.age <= highValue){
+        let liElement=document.createElement("li")
+    liElement.innerText = `You guessed right. Characters younger than ${lowValue} or older than ${highValue} years were removed.`
+    document.getElementById("guess-history").appendChild(liElement)}
+            else{
+                let liElement=document.createElement("li")
+            liElement.innerText = `You guessed wrong. All characters between ${lowValue} and ${highValue} years were removed.`
+            document.getElementById("guess-history").appendChild(liElement)}
+            
 
 if(lowValue <= yourIdentity.age && highValue >= yourIdentity.age){
     console.log("Age guess correct triggered")
@@ -224,6 +289,15 @@ function valueCheckerBillboard(){
 
     let lowValue = document.getElementById("firstValueBillBoard").value
     let highValue = document.getElementById("secondValueBillboard").value
+
+    if(lowValue <= yourIdentity.billboardHot100 && yourIdentity.billboardHot100 <= highValue){
+        let liElement=document.createElement("li")
+    liElement.innerText = `You guessed right. Characters with less than ${lowValue} or more than ${highValue} Hot100 Hits were removed.`
+    document.getElementById("guess-history").appendChild(liElement)}
+            else{
+                let liElement=document.createElement("li")
+            liElement.innerText = `You guessed wrong. Characters with ${lowValue} to ${highValue} Hot100 Hits were removed.`
+            document.getElementById("guess-history").appendChild(liElement)}
 
 if(lowValue <= yourIdentity.billboardHot100 && highValue >= yourIdentity.billboardHot100){
     console.log("Age guess correct triggered")

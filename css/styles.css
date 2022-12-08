@@ -13,9 +13,14 @@ h1{
     font-size: 3.5rem;
 }
 
+
 .row-flex{
     display: flex;
     justify-content: end;
+}
+
+#guess-history{
+    font-size: 1.2rem;
 }
 
 .character-flex{
@@ -158,6 +163,11 @@ renderGuessbox{
 
 #one-hit-wonder-flex{
     display: flex;
+}
+
+#counter-and-history{
+    display: flex;
+    align-items: center;
 }
 
 }
