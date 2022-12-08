@@ -10,7 +10,9 @@ html{
 }
 
 h1{
-    font-size: 3.5rem;
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
@@ -29,8 +31,8 @@ h1{
     align-items: center;
     /* width: 180px; */
     width: 10vw;
-    border: 1px solid black;
-    padding-bottom: 5px;
+    border: 3px solid #D0A5C0;
+    padding-bottom: 0px;
 }
 
 .character-flex h2{
@@ -52,8 +54,8 @@ img{
     flex-direction: column;
 }
 
-#guess-box h2{
-    margin-top: 0
+h2{
+    margin-top: 0;
 }
 
 #instruction{
@@ -61,7 +63,7 @@ img{
     background-color: #9DF7E5;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     padding-left: 15px;
 }
 
@@ -73,10 +75,42 @@ img{
 #game{
     width:60vw;
     background-color: #9DF7E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+#instruction-box{
+    margin-bottom: 5rem;
+    border: 3px solid #D0A5C0;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#guess-box{
+    margin-bottom: 5rem;
+    border: 3px solid #D0A5C0;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+
+}
+#one-hit-wonder-box{
+    border: 3px solid #D0A5C0;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+
 }
 
 p{
     font-size: 2.5rem;
+    padding: 0.3rem;
 }
 
 #instruction h2{
@@ -117,11 +151,12 @@ audio{
 /* width 14.5rem */
 
 #counter-box{
-    border: 3px solid black;
+    border: 3px solid #D0A5C0;
     width:fit-content;
     padding: 5px 10px;
+    margin-bottom: 0;
     /* position:fixed; */
-    bottom: 0;
+    /* bottom: 0; */
 }
 
 #counter-box-smallscreen{
@@ -153,7 +188,7 @@ renderGuessbox{
 
 #myIdentityGuess{
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid #D0A5C0;
     border-radius: 10px;
 }
 
@@ -165,9 +200,14 @@ renderGuessbox{
     display: flex;
 }
 
+ol{
+    margin: 0;
+}
 #counter-and-history{
     display: flex;
-    align-items: center;
+    align-items: end;
+    bottom: 20px;
+  
 }
 
 }

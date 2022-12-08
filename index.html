@@ -15,41 +15,6 @@
    
 
     <main>
-      
-    <section id="instruction">
-      <header>
-        <h1>Who's Who - Music Superstar Edition</h1>
-      </header>
-      <div>
-        <h2>Instructions</h2>
-        <p>Find out who you are by asking the right questions. Musicians will turn black and white once they are ruled out. Note: For groups it is enough if one person wears glasses/a hat.<br>PS: Don't buy anything.</p>
-        <!-- <h2>Take your guess!</h2> -->
-        <div id="guess-box">
-          <h2>Take your guess!</h2>
-          <p>I got a feeling I know stuff about my</p>
-          <div>
-          <button class="button-style" onclick="selectorManipulator(1)">Sex</button>
-          <button class="button-style" onclick="selectorManipulator(2)">Age</button>
-          <button class="button-style" onclick="selectorManipulator(3)">Eyewear</button>
-          <button class="button-style" onclick="selectorManipulator(4)">Headwear</button>
-          <button class="button-style" onclick="selectorManipulator(5)">Billboard Success</button>
-        </div>
-      </div>
-      <h2 class="bigscreen-wonder">One Hit Wonder</h2>
-      <p class="bigscreen-wonder">Try to land a lucky punch by guessing your identiy. <br>You have a <span id="guess-probability">4</span>% chance of guessing correctly.</p>
-      <div id="one-hit-wonder-flex"><input class="bigscreen-wonder" type="text" placeholder="Your guess goes here..." id="myIdentityGuess"></input> <button  class="button-style" class="bigscreen-wonder"  onclick="identityGuess()">🙏 🙏 🙏</button> </div>         
-
-      
-            </div>
-          </div>
-          </div>
-          <audio id="myAudio" src="./audio/rick-astley-never-gonna-give-you-up.mp3" preload="auto">
-          </audio>
-          <div id="counter-and-history"><p id="counter-box">Guess-Counter: <span id="counter">0</span></p>
-          <ol id="guess-history"></ol></div>
-    </section>
-
-
     <section id="game">
 
       <div class="row-flex"> 
@@ -239,15 +204,43 @@
         </div>
 
     </div>
-    <div class="smallscreen-wonder"><h2>One Hit Wonder</h2>
-      <p>Try to land a lucky punch by guessing your identiy. <br>You have a <span id="guess-probability">4</span>% chance of guessing correctly.</p>
-      <input type="text" placeholder="Your guess goes here..." id="myIdentityGuess"></input> <button class="button-style" onclick="identityGuess()">🙏 🙏 🙏</button></div>
-    <div><p id="counter-box-smallscreen">Guess-Counter: <span id="counter">0</span></p></div>
+    
 
+    </section>  
+    <section id="instruction">
+      <header>
+        <h1>Who's Who - Music Superstar Edition</h1>
+      </header>
+      <div>
+        <div id="instruction-box"><h2>Instructions</h2>
+        <p>Find out who you are by asking the right questions. Musicians will turn black and white once they are ruled out. Note: For groups it is enough if one person wears glasses/a hat.<br>PS: Don't buy anything.</p></div>
+        <div id="guess-box">
+          <h2>Take your guess!</h2>
+          <p>I got a feeling I know stuff about my</p>
+          <div>
+          <button class="button-style" onclick="selectorManipulator(1)">Sex</button>
+          <button class="button-style" onclick="selectorManipulator(2)">Age</button>
+          <button class="button-style" onclick="selectorManipulator(3)">Eyewear</button>
+          <button class="button-style" onclick="selectorManipulator(4)">Headwear</button>
+          <button class="button-style" onclick="selectorManipulator(5)">Billboard Success</button>
+        </div>
+      </div>
+      <div id="one-hit-wonder-box"><h2 class="bigscreen-wonder">One Hit Wonder</h2>
+      <p class="bigscreen-wonder">Try to land a lucky punch by guessing your identiy. <br>You have a <span id="guess-probability">4</span>% chance of guessing correctly.</p>
+      <div id="one-hit-wonder-flex"><input class="bigscreen-wonder" type="text" placeholder="Your guess goes here..." id="myIdentityGuess"></input> <button  class="button-style" class="bigscreen-wonder"  onclick="identityGuess()">🙏 🙏 🙏</button> </div></div>         
+
+      
+            </div>
+          </div>
+          </div>
+          <audio id="myAudio" src="./audio/rick-astley-never-gonna-give-you-up.mp3" preload="auto">
+          </audio>
+          <div id="counter-and-history"><p id="counter-box">Guess-Counter: <span id="counter">0</span></p>
+          <ol id="guess-history"></ol></div>
     </section>
+
 </main>
 <script src="./js/index.js"></script>
-<!-- <script src="./js/class-character.js"></script> -->
 
   </body>
   </html>

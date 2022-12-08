@@ -53,7 +53,6 @@ const olElement = document.getElementById("guess-history")
 const guessboxElement = document.getElementById("guess-box")
 const instructionsElement = document.getElementById("instruction")
 const audioElements = document.querySelectorAll("audio")
-// let playSound = () => new Audio("./audio/rick-astley-never-gonna-give-you-up.mp3").play();
 for (let i=0; audioElements.length; i++){
     audioElements[i].volume = 0.15
 }
