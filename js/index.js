@@ -84,7 +84,7 @@ if(buttonInput === 4){
 
 if(buttonInput === 5){
     guessboxElement.innerHTML = `<p>I think I had between
-<span><input type="number" id="firstValueBillBoard"></input><span> and <span><input type="number" id="secondValueBillboard"></input><span> hits in the Billboard Hot 100.</p> <button class="button-style" onclick="valueCheckerBillboard()">Hit it</button><br><p>Note: The Billboard Hot 100 is the music industry standard record chart in the United States for songs, published weekly by Billboard magazine. Chart rankings are based on sales (physical and digital), radio play, and online streaming in the United States.<p>`
+<span><input type="number" id="firstValueBillBoard"></input><span> and <span><input type="number" id="secondValueBillboard"></input><span> hits in the Billboard Hot 100.</p> <button class="button-style" onclick="valueCheckerBillboard()">Hit it</button><br><p>Note: The Billboard Hot 100 is the industry standard record chart in the US for songs, published weekly. Charts are based on sales, radio play, and streaming in the US.<p>`
 }
 
 }
