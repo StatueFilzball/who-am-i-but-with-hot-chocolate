@@ -303,7 +303,7 @@ if(lowValue <= yourIdentity.billboardHot100 && highValue >= yourIdentity.billboa
 
     for(let i = 0; i < characterArray.length; i++){
         
-        if(lowValue > characterArray[i].billboardHot100 || highValue < characterArray[i].billboardHot100){
+        if(lowValue >= characterArray[i].billboardHot100 || highValue <= characterArray[i].billboardHot100){
 
 characterToSwapImage = characterArray[i]
 characterArray.splice(i, 1) 
@@ -321,7 +321,7 @@ else if(lowValue > yourIdentity.billboardHot100 || highValue < yourIdentity.bill
     console.log("Age guess incorrect triggered")
         for(let i = 0; i < characterArray.length; i++){
         
-            if(lowValue < characterArray[i].billboardHot100 && highValue > characterArray[i].billboardHot100){ //this is always gonna be true
+            if(lowValue <= characterArray[i].billboardHot100 && highValue >= characterArray[i].billboardHot100){ //this is always gonna be true
     
     characterToSwapImage = characterArray[i]
     characterArray.splice(i, 1) 
