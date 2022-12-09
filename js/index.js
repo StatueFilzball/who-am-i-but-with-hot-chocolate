@@ -303,7 +303,7 @@ if(lowValue <= yourIdentity.billboardHot100 && highValue >= yourIdentity.billboa
 
     for(let i = 0; i < characterArray.length; i++){
         
-        if(lowValue >= characterArray[i].billboardHot100 || highValue <= characterArray[i].billboardHot100){
+        if(lowValue > characterArray[i].billboardHot100 || highValue < characterArray[i].billboardHot100){
 
 characterToSwapImage = characterArray[i]
 characterArray.splice(i, 1) 
@@ -415,7 +415,5 @@ function identityGuess(){
 }
 
 
-//addeventlistener to guess identityguess trigger
-//try add 43
 
 
